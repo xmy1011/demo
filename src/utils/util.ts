@@ -22,3 +22,18 @@ export const searchRoute = (path:string, routes: RouteObject[] = []): RouteObjec
   return result;
 
 }
+
+// 深拷贝
+function deepCopy(obj:any) {
+  let newObj = Array.isArray(obj) ? [] : {};
+  if (obj && typeof obj === "object") {
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        newObj[key] = deepCopy(obj[key]);
+      }
+    }
+  } else {
+    newObj = obj;
+  }
+  return newObj;
+}

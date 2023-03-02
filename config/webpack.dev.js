@@ -19,7 +19,9 @@ module.exports = merge(baseConfig, {
     },
     proxy: {
       '/api':{
-        target: 'https://mock.mengxuegu.com/mock/62abda3212c1416424630a45',
+        target: 'http://localhost:8080',
+        // target: 'https://www.fastmock.site/mock/eade0b947aad4f1f8ec235724800d8fa',
+        // target: 'https://mock.mengxuegu.com/mock/62abda3212c1416424630a45',
         changeOrigin: true, 
         pathRewrite: { '^/api': '' },
       }

@@ -3,6 +3,7 @@ import homeRouter from "./modules/home";
 import errorRouter from "./modules/error";
 import { RouteObject } from './interface';
 import Login from '@/view/login';
+import Step from '@/view/StepBar';
 
 // 处理路由
 export const routerArray: RouteObject[] = [
@@ -19,6 +20,7 @@ export const routerArray: RouteObject[] = [
       key: 'login'
     }
   },
+  
   ...homeRouter,
   ...errorRouter,
 ]

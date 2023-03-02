@@ -20,9 +20,9 @@ const LoginForm = (props:any)=> {
       params.password = md5(params.password)
       login(params).then(res => {
         console.log(res);
-        if(res.data?.access_token){
+        if(res.data?.accessToken){
           // store.dispatch(setToken(res.data.access_token)) 
-          setToken(res.data.access_token)
+          setToken(res.data.accessToken)
           message.success("登录成功！");
           navigate(HOME_URL)
         }
