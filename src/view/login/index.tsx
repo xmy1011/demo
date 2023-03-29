@@ -4,7 +4,6 @@ import logo from "@/assets/images/logo.png";
 import LoginForm from './LoginForm';
 
 export default function Login() {
-  console.log("ddddd");
   return (
     <div className='login-container'>
       <div className='login-box'>
